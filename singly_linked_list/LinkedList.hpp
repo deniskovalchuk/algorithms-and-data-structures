@@ -24,7 +24,7 @@ public:
     void push_back(const T value);
     void push_front(const T value);
     void insert(const T value, const int position);
-    void remove(T value);
+    void remove(const T value);
     void clear();
     T get(const int position);
     void reverse();
@@ -43,7 +43,7 @@ private:
     Node *tail;
     int _length;
 
-    void init(T value);
+    void init(const T value);
 };
 
 template<typename T>
@@ -90,6 +90,7 @@ void LinkedList<T>::push_front(const T value) {
     head = node;
 }
 
+// warning: complexity O(n)
 template<typename T>
 void LinkedList<T>::insert(const T value, const int position) {
     if (position < 0 || position > _length) {
