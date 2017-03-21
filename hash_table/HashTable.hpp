@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * HashTable.hpp
+=======
+ * HashTable.hpp -- Hash table. 
+>>>>>>> 09e689599189314a8e327063d767b915ae04334a
  *
  * Copyright (c) 2017, Denis Kovalchuk <deniskk25@gmail.com>
  *
@@ -73,14 +77,20 @@ template<typename TKey, typename TValue>
 void HashTable<TKey, TValue>::insert(TKey key, TValue value) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 09e689599189314a8e327063d767b915ae04334a
     for (auto it = chain.begin(); it != chain.end(); ++it) {
         if (it->first == key) {
             it->second = value;
             return;
         }
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 09e689599189314a8e327063d767b915ae04334a
     chain.push_back(make_pair(key, value));
 }
 
@@ -88,6 +98,7 @@ template<typename TKey, typename TValue>
 void HashTable<TKey, TValue>::remove(TKey key) throw(KeyNotFoundException) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
+<<<<<<< HEAD
 
     auto it = remove_if(chain.begin(), chain.end(),
               [key](pair<TKey, TValue>& pair) -> bool { return pair.first == key; });
@@ -96,6 +107,13 @@ void HashTable<TKey, TValue>::remove(TKey key) throw(KeyNotFoundException) {
         throw key_not_found;
     }
 
+=======
+    auto it = remove_if(chain.begin(), chain.end(),
+              [key](pair<TKey, TValue>& pair) -> bool { return pair.first == key; });
+    if (it == chain.end()) {
+        throw key_not_found;
+    }
+>>>>>>> 09e689599189314a8e327063d767b915ae04334a
     chain.erase(it, chain.end());
 }
 
@@ -103,6 +121,7 @@ template<typename TKey, typename TValue>
 TValue& HashTable<TKey, TValue>::get(TKey key) throw(KeyNotFoundException) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
+<<<<<<< HEAD
 
     auto it = find_if(chain.begin(), chain.end(),
             [key](pair<TKey, TValue>& pair) -> bool { return pair.first == key; });
@@ -111,6 +130,13 @@ TValue& HashTable<TKey, TValue>::get(TKey key) throw(KeyNotFoundException) {
         throw key_not_found;
     }
 
+=======
+    auto it = find_if(chain.begin(), chain.end(),
+            [key](pair<TKey, TValue>& pair) -> bool { return pair.first == key; });
+    if (it == chain.end()) {
+        throw key_not_found;
+    }
+>>>>>>> 09e689599189314a8e327063d767b915ae04334a
     return it->second;
 }
 
