@@ -1,5 +1,6 @@
-# Data structures
+# Complexities
 
+<h2>Data structures</h2>
 <table>
   <tr>
     <th>Data Structure</th>
