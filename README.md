@@ -1,6 +1,5 @@
 # Complexities
 
-<h2>Data structures</h2>
 <table>
   <tr>
     <th>Оператор сравнения асимптотических оценок</th>
@@ -28,7 +27,7 @@
   </tr>
 </table>
 
-
+<h2>Data structures</h2>
 <table>
   <tr>
     <th>Data Structure</th>

@@ -13,7 +13,7 @@
 using namespace std;
 
 template<typename T>
-typename vector<T>::const_iterator binary_search(const vector<T>&, const T);
+typename vector<T>::const_iterator binary_search(const vector<T>&, const T&);
 
 int main(int argc, char *argv[]) {
     
@@ -28,9 +28,9 @@ int main(int argc, char *argv[]) {
 }
 
 template<typename T>
-typename vector<T>::const_iterator binary_search(const vector<T>& container, const T element) {
-    typename vector<T>::const_iterator low = begin(container);
-    typename vector<T>::const_iterator high = end(container);
+typename vector<T>::const_iterator binary_search(const vector<T>& container, const T& element) {
+    typename vector<T>::const_iterator low = container.begin();
+    typename vector<T>::const_iterator high = container.end();
 
     if (container.size() == 0 || container.front() > element || container.back() < element) {
         return container.end();

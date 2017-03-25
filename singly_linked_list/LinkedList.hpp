@@ -26,7 +26,7 @@ public:
     void insert(const T value, const int position) throw(out_of_range);
     void remove(const T value);
     void clear();
-    T get(const int position) throw(out_of_range);
+    T& get(const int position) throw(out_of_range);
     void reverse();
     bool empty() const;
     void print() const;
@@ -158,7 +158,7 @@ void LinkedList<T>::init(const T value) {
 }
 
 template<typename T>
-T LinkedList<T>::get(const int position) throw(out_of_range) {
+T& LinkedList<T>::get(const int position) throw(out_of_range) {
     if (position < 0 || position > _length - 1) {
         throw out_of_range("Incorrect a position.");
     }
