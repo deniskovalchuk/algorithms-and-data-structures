@@ -27,20 +27,99 @@
   </tr>
 </table>
 
-<h2>Data structures</h2>
+<h2>Array Sorting Algorithms</h2>
 <table>
   <tr>
+    <th>Algorithm</th>
+    <th colspan="3">Time Complexity</th>
+    <th>Space Complexity</th>
+  </tr>
+  <tr>
+    <th align="center"></th>
+    <th>Best</th>
+    <th>Average</th>
+    <th>Worst</th>
+    <th>Worst</th>
+  </tr>
+  <tr align="center">
+    <th>Quicksort</th>
+    <td>Ω(n log(n))</td>
+    <td>Θ(n log(n))</td>
+    <td>O(n^2)</td>
+    <td>O(log(n))</td>
+  </tr>
+    <tr align="center">
+    <th>Mergesort</th>
+    <td>Ω(n log(n))</td>
+    <td>Θ(n log(n))</td>
+    <td>O(n log(n))</td>
+    <td>O(n)</td>
+  </tr>
+    <tr align="center">
+    <th>Timsort</th>
+    <td>Ω(n)</td>
+    <td>Θ(n log(n))</td>
+    <td>O(n log(n))</td>
+    <td>O(n)</td>
+  </tr>
+   <tr align="center">
+    <th>Heapsort</th>
+    <td>Ω(n log(n))</td>
+    <td>Θ(n log(n))</td>
+    <td>O(n log(n))</td>
+    <td>O(1)</td>
+  </tr>
+   <tr align="center">
+    <th>Bubble sort</th>
+    <td>Ω(n)</td>
+    <td>Θ(n^2)</td>
+    <td>O(n^2)</td>
+    <td>O(1)</td>
+  </tr>
+  <tr align="center">
+    <th>Insertion sort</th>
+    <td>Ω(n)</td>
+    <td>Θ(n^2)</td>
+    <td>O(n^2)</td>
+    <td>O(1)</td>
+  </tr>
+  <tr align="center">
+    <th>Selection sort</th>
+    <td>Ω(n^2)</td>
+    <td>Θ(n^2)</td>
+    <td>O(n^2)</td>
+    <td>O(1)</td>
+  </tr>
+  <tr align="center">
+    <th>Tree sort</th>
+    <td>Ω(n log(n))</td>
+    <td>Θ(n log(n))</td>
+    <td>O(n^2)</td>
+    <td>O(n)</td>
+  </tr>
+    <tr align="center">
+    <th>Shell sort</th>
+    <td>Ω(n log(n))</td>
+    <td>Θ(n(log(n))^2)</td>
+    <td>O(n(log(n))^2)</td>
+    <td>O(1)</td>
+  </tr>
+  </table>
+
+<h2>Data structures</h2>
+<table>
+  <tr align="center">
     <th>Data Structure</th>
     <th colspan="8">Time Complexity</th>
     <th>Space Complexity</th>
   </tr>
-  <tr>
+  <tr align="center">
     <th></th>
     <th colspan="4">Average</th>
     <th colspan="4">Worst</th>
     <th>Worst</th>
   </tr>
-  <tr>
+  <tr align="center">
     <th></th>
     <th>Access</th>
     <th>Search</th>
@@ -52,7 +131,7 @@
     <th>Deletion</th>
     <th></th>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Array</th>
     <td>O(1)</td>
     <td>O(n)</td>
@@ -64,7 +143,7 @@
     <td>O(n)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Stack</th>
     <td>O(n)</td>
     <td>O(n)</td>
@@ -76,7 +155,7 @@
     <td>O(1)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Queue</th>
     <td>O(n)</td>
     <td>O(n)</td>
@@ -88,7 +167,7 @@
     <td>O(1)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Singly-Linked List</th>
     <td>O(n)</td>
     <td>O(n)</td>
@@ -100,7 +179,7 @@
     <td>O(1)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Doubly-Linked List</th>
     <td>O(n)</td>
     <td>O(n)</td>
@@ -112,7 +191,7 @@
     <td>O(1)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Skip List</th>
     <td>O(log(n))</td>
     <td>O(log(n))</td>
@@ -124,7 +203,7 @@
     <td>O(n)</td>
     <td>O(n log(n))</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Hash table</th>
     <td>N/A</td>
     <td>O(1)</td>
@@ -136,7 +215,7 @@
     <td>O(n)</td>
     <td>O(n)</td>
   </tr>
-    <tr>
+    <tr align="center">
     <th>Binary Search Tree</th>
     <td>Θ(log(n))</td>
     <td>Θ(log(n))</td>
@@ -148,7 +227,7 @@
     <td>O(n)</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>Red-Black Tree</th>
     <td>Θ(log(n))</td>
     <td>Θ(log(n))</td>
@@ -160,7 +239,7 @@
     <td>O(log(n))</td>
     <td>O(n)</td>
   </tr>
-  <tr>
+  <tr align="center">
     <th>B-Tree</th>
     <td>Θ(log(n))</td>
     <td>Θ(log(n))</td>

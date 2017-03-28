@@ -32,15 +32,15 @@ private:
     vector< list< pair<TKey, TValue> > > array;
     int _capacity;
     
-    int hash(const TKey key);
+    int hash(const TKey& key);
     
 public:
     HashTable(int capacity = 16);
     virtual ~HashTable();
 
-    void insert(const TKey key, const TValue value);
-    void remove(const TKey key) throw(KeyNotFoundException);
-    TValue& get(const TKey key) throw(KeyNotFoundException);
+    void insert(const TKey& key, const TValue& value);
+    void remove(const TKey& key) throw(KeyNotFoundException);
+    TValue& get(const TKey& key) throw(KeyNotFoundException);
 };
 
 template<typename TKey, typename TValue>
@@ -56,7 +56,7 @@ HashTable<TKey, TValue>::~HashTable() {
 
 // FAQ6
 template<typename TKey, typename TValue>
-int HashTable<TKey, TValue>::hash(TKey key) {
+int HashTable<TKey, TValue>::hash(const TKey& key) {
 	unsigned int hash = 0;
 	for (size_t i = 0; i < key.length(); i++) {
 		hash += static_cast<unsigned int>(key[i]);
@@ -70,7 +70,7 @@ int HashTable<TKey, TValue>::hash(TKey key) {
 }
 
 template<typename TKey, typename TValue>
-void HashTable<TKey, TValue>::insert(TKey key, TValue value) {
+void HashTable<TKey, TValue>::insert(const TKey& key, const TValue& value) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
 
@@ -85,7 +85,7 @@ void HashTable<TKey, TValue>::insert(TKey key, TValue value) {
 }
 
 template<typename TKey, typename TValue>
-void HashTable<TKey, TValue>::remove(TKey key) throw(KeyNotFoundException) {
+void HashTable<TKey, TValue>::remove(const TKey& key) throw(KeyNotFoundException) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
 
@@ -100,7 +100,7 @@ void HashTable<TKey, TValue>::remove(TKey key) throw(KeyNotFoundException) {
 }
 
 template<typename TKey, typename TValue>
-TValue& HashTable<TKey, TValue>::get(TKey key) throw(KeyNotFoundException) {
+TValue& HashTable<TKey, TValue>::get(const TKey& key) throw(KeyNotFoundException) {
     int index = hash(key);
     list< pair<TKey, TValue> >& chain = array.at(index);
 

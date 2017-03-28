@@ -20,8 +20,8 @@ public:
     BinarySearchTree();
     virtual ~BinarySearchTree();
     
-    void add(const T key);
-    void remove(const T key);
+    void add(const T& key);
+    void remove(const T& key);
     void preorder() const;
     void inorder() const;
     void postorder() const;
@@ -37,8 +37,8 @@ private:
     
     Node *root;
     
-    Node *add(Node *node, T key);
-    Node *remove(Node *node, T key);
+    Node *add(Node *node, const T& key);
+    Node *remove(Node *node, const T& key);
     void preorder(const Node *node) const;
     void inorder(const Node *node) const;
     void postorder(const Node *node) const;
@@ -56,7 +56,7 @@ BinarySearchTree<T>::~BinarySearchTree() {
 }
 
 template<typename T>
-void BinarySearchTree<T>::add(const T key) {
+void BinarySearchTree<T>::add(const T& key) {
     if (root == nullptr) {
         root = new Node();
         root->key = key;
@@ -68,7 +68,7 @@ void BinarySearchTree<T>::add(const T key) {
 }
 
 template<typename T>
-void BinarySearchTree<T>::remove(const T key) {
+void BinarySearchTree<T>::remove(const T& key) {
     if (root->key == key) {
         root = remove(root, key);
         return;
@@ -101,7 +101,7 @@ void BinarySearchTree<T>::postorder() const {
 }
 
 template<typename T>
-typename BinarySearchTree<T>::Node *BinarySearchTree<T>::add(Node *node, const T key) {
+typename BinarySearchTree<T>::Node *BinarySearchTree<T>::add(Node *node, const T& key) {
     if (node == nullptr) {
         node = new Node();
         node->key = key;
@@ -119,7 +119,7 @@ typename BinarySearchTree<T>::Node *BinarySearchTree<T>::add(Node *node, const T
 }
 
 template<typename T>
-typename BinarySearchTree<T>::Node *BinarySearchTree<T>::remove(Node *node, const T key) {
+typename BinarySearchTree<T>::Node *BinarySearchTree<T>::remove(Node *node, const T& key) {
     if (node == nullptr) {
         return node;
     }

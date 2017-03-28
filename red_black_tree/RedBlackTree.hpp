@@ -20,8 +20,8 @@ public:
     RedBlackTree();
     virtual ~RedBlackTree();
 
-    void add(const T key);
-    void remove(const T key);
+    void add(const T& key);
+    void remove(const T& key);
     void postorder();
     
 private:
@@ -39,7 +39,7 @@ private:
     Node *grandparent(Node *node) const;
     Node *sibling(Node *node) const;
     Node *uncle(Node *node) const;
-    Node *create_node(Node *parent, const T key, const Color color);
+    Node *create_node(Node *parent, const T& key, const Color color);
     void insert_case1(Node *node);
     void insert_case2(Node *node);
     void insert_case3(Node *node);
@@ -92,7 +92,7 @@ typename RedBlackTree<T>::Node *RedBlackTree<T>::uncle(Node *node) const {
 }
 
 template<typename T>
-typename RedBlackTree<T>::Node *RedBlackTree<T>::create_node(Node *parent, const T key, const Color color) {
+typename RedBlackTree<T>::Node *RedBlackTree<T>::create_node(Node *parent, const T& key, const Color color) {
     Node *node = new Node();
     node->key = key;
     node->color = color;
@@ -103,7 +103,7 @@ typename RedBlackTree<T>::Node *RedBlackTree<T>::create_node(Node *parent, const
 }
 
 template<typename T>
-void RedBlackTree<T>::add(const T key) {
+void RedBlackTree<T>::add(const T& key) {
     if (root == nullptr) {
         root = create_node(nullptr, key, black);
         return;

@@ -21,10 +21,10 @@ public:
     LinkedList();
     virtual ~LinkedList();
 
-    void push_back(const T value);
-    void push_front(const T value);
-    void insert(const T value, const int position) throw(out_of_range);
-    void remove(const T value);
+    void push_back(const T& value);
+    void push_front(const T& value);
+    void insert(const T& value, const int position) throw(out_of_range);
+    void remove(const T& value);
     void clear();
     T& get(const int position) throw(out_of_range);
     void reverse();
@@ -43,7 +43,7 @@ private:
     Node *tail;
     int _length;
 
-    void init(const T value);
+    void init(const T& value);
 };
 
 template<typename T>
@@ -66,7 +66,7 @@ void LinkedList<T>::clear() {
 }
 
 template<typename T>
-void LinkedList<T>::push_back(const T value) {
+void LinkedList<T>::push_back(const T& value) {
     if (empty()) {
         init(value);
         return;
@@ -78,7 +78,7 @@ void LinkedList<T>::push_back(const T value) {
 }
 
 template<typename T>
-void LinkedList<T>::push_front(const T value) {
+void LinkedList<T>::push_front(const T& value) {
     if (empty()) {
         init(value);
         return;
@@ -92,7 +92,7 @@ void LinkedList<T>::push_front(const T value) {
 
 // warning: complexity O(n)
 template<typename T>
-void LinkedList<T>::insert(const T value, const int position) throw(out_of_range) {
+void LinkedList<T>::insert(const T& value, const int position) throw(out_of_range) {
     if (position < 0 || position > _length) {
         throw out_of_range("Incorrect a position.");
     }    
@@ -120,7 +120,7 @@ void LinkedList<T>::insert(const T value, const int position) throw(out_of_range
 }
 
 template<typename T>
-void LinkedList<T>::remove(const T value) {
+void LinkedList<T>::remove(const T& value) {
     if (empty()) {
         return;
     }
@@ -150,7 +150,7 @@ void LinkedList<T>::reverse() {
 }
 
 template<typename T>
-void LinkedList<T>::init(const T value) {
+void LinkedList<T>::init(const T& value) {
     _length++;
     head = new Node();
     head->value = value;
