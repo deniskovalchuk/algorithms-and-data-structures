@@ -262,4 +262,4 @@
     <li><i>Big-O Algorithm Complexity Cheat Sheet.</i> Available at: <a href="http://bigocheatsheet.com">http://bigocheatsheet.com</a></li>
     <li><i>Знай сложности алгоритмов.</i> Available at: <a href="https://habrahabr.ru/post/188010">https://habrahabr.ru/post/188010</a></li>
     <li><i>Оценка сложности алгоритмов.</i> Available at: <a href="https://habrahabr.ru/post/104219/">https://habrahabr.ru/post/104219</a></li>  
-  </ol>
+  </ol>           

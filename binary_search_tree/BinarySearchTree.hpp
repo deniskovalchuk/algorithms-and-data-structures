@@ -6,6 +6,7 @@
  * This code is licensed under a MIT-style license.
  */
 
+
 #ifndef BINARY_SEARCH_TREE_HPP
 #define BINARY_SEARCH_TREE_HPP
 
