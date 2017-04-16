@@ -10,7 +10,7 @@
 </ol>
 
 <h2>Image</h2>
-<img src="https://gist.githubusercontent.com/deniskovalchuk/ffcff1289e8b0209d47fb7336dfce5c0/raw/61875191a64319ed367b5805c9cf9a8274677952/ss.png">
+<img src="https://gist.githubusercontent.com/deniskovalchuk/ffcff1289e8b0209d47fb7336dfce5c0/raw/885491611155e313aa040fc61347f268ba13efb9/ss.png">
 
 <h2>Complexities</h2>
 <div>
