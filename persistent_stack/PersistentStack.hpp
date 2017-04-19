@@ -22,13 +22,13 @@ class PersistentStack
 {
 public:
     PersistentStack();
-    void push(const int number, const T& element);
+    void push(const size_t number, const T& element);
     void push(const T& element);
-    void pop(const int number);
+    void pop(const size_t number);
     void pop();
-    const T& top(const int number) const;
+    const T& top(const size_t number) const;
     const T& top() const;
-    stack<T> get(const int number) const;
+    stack<T> get(const size_t number) const;
     stack<T> get() const;
     
 private:
@@ -37,11 +37,11 @@ private:
         Node(T elem, shared_ptr<Node> prev) : element(elem),
                                               previous(prev) { }
 
-        const T& get_element() {
+        const T& get_element() const {
             return element;
         }
 
-        shared_ptr<Node> get_previous() {
+        shared_ptr<Node> get_previous() const {
             return previous;
         }
 
@@ -67,7 +67,7 @@ PersistentStack<T>::PersistentStack() {
  * Push @param{element} to stack number @param{number}. 
  */
 template<typename T>
-void PersistentStack<T>::push(const int number, const T& element) {
+void PersistentStack<T>::push(const size_t number, const T& element) {
     shared_ptr<Node> current_top = tops.at(number);
     shared_ptr<Node> new_top = make_shared<Node>(element, current_top);
     tops.push_back(new_top);
@@ -85,7 +85,7 @@ void PersistentStack<T>::push(const T& element) {
  * Pop top element of stack number @param{number}.
  */
 template<typename T>
-void PersistentStack<T>::pop(const int number) {
+void PersistentStack<T>::pop(const size_t number) {
     shared_ptr<Node> previous_top = tops.at(number)->get_previous();
     shared_ptr<Node> new_top = make_shared<Node>(*previous_top);
     tops.push_back(new_top);
@@ -103,7 +103,7 @@ void PersistentStack<T>::pop() {
  * Return top element of stack number @param{number}.
  */
 template<typename T>
-const T& PersistentStack<T>::top(const int number) const {
+const T& PersistentStack<T>::top(const size_t number) const {
     return tops.at(number)->get_element();
 }
 
@@ -119,7 +119,7 @@ const T& PersistentStack<T>::top() const {
  * Return stack number @param{number}.
  */
 template<typename T>
-stack<T> PersistentStack<T>::get(const int number) const {
+stack<T> PersistentStack<T>::get(const size_t number) const {
     shared_ptr<Node> node = tops.at(number);
     deque<T> dstack;
 
