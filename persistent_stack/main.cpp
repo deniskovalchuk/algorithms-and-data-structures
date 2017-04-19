@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     print_stack(stack4);
     print_stack(stack5);
     
-    persistent_stack.push(4, 47); // stack 6 - push 47 to stack number 4
+    persistent_stack.push(3, 47); // stack 6 - push 47 to stack number 3
     persistent_stack.push(5, 74); // stack 7 - push 74 to stack number 74
     persistent_stack.pop(3);      // stack 8 - pop top element of stack number 3
 

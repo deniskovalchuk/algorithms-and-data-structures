@@ -43,7 +43,7 @@
  Тогда:
  <pre>
 <code>
-    persistent_stack.push(4, 47); // push 47 to stack number 4
+    persistent_stack.push(3, 47); // push 47 to stack number 3
     persistent_stack.push(5, 74); // push 74 to stack number 74
     persistent_stack.pop(3);      // pop top element of stack number 3
 </code>
