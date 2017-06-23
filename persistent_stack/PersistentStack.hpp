@@ -50,6 +50,9 @@ private:
         shared_ptr<Node> previous;
     };
 
+    PersistentStack(const PersistentStack<T>& other) = delete;
+    PersistentStack& operator=(const PersistentStack<T>& other) = delete;
+    
     /**
      * Vector containing top elements of all stacks.
      */

@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     print_stack(stack6);
     print_stack(stack7);
     print_stack(stack8);
-    
+
     return 0;
 }
 
