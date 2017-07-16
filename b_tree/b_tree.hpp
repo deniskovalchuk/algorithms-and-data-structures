@@ -102,7 +102,8 @@ b_tree<TKey, TValue>::search(node *node, const TKey& key) {
         insert(make_pair(key, TValue()));
         return search(root, key);
     }
-
+    
+    // TODO: replace on binary search (lower_bound) 
     auto it = find_if(node->keys.begin(), node->keys.end(), [&](const pair<TKey, TValue>& pr) {
         return key <= pr.first;
     });
@@ -164,6 +165,7 @@ template<typename TKey, typename TValue>
 void
 b_tree<TKey, TValue>::node::insert_non_full(const pair<TKey, TValue>& elem) {
     if (leaf) {
+        // TODO: replace on binary search (lower_bound) 
         auto it = find_if(keys.begin(), keys.end(), [&](const pair<TKey, TValue>& pr) {
             return elem.first <= pr.first;
         });
